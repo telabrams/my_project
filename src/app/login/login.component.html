@@ -1,3 +1,34 @@
-<p>
-  login works!
-</p>
+<section class="login-area">
+  <div class="container">
+    <div class="row clearfix">
+      <div class="col-md-12">
+        <div class="login-container">
+          <form #loginForm="ngForm" (ngSubmit)="onSubmit();">
+            <md-input-container class="input-item">
+              <input mdInput placeholder="Username" name="username" required [(ngModel)]="username" type="text" value="">
+              <md-error>
+                Please enter your <strong>Username</strong>
+              </md-error>
+            </md-input-container>
+            <md-input-container class="input-item">
+              <input mdInput placeholder="Password" name="password" required [(ngModel)]="password" type="password" value="">
+              <md-error>
+                Password is <strong>required</strong>
+              </md-error>
+            </md-input-container>
+            <div class="button-container">
+              <button type="submit" [disabled]="loginForm.form.invalid" md-raised-button>Start</button>
+            </div>
+            <div>
+              <md-spinner></md-spinner>
+            </div>
+              <!-- <md-error *ngIf="usernameControl.hasError('dublicate')">
+                This username is reserved <strong>allready</strong>
+              </md-error> -->
+            <md-hint id="form-login-message" *ngIf="loginForm.form.valid" align="start"><strong>{{addResult}}</strong> </md-hint>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

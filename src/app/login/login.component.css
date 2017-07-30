@@ -1,0 +1,17 @@
+.login-container {
+  text-align: center;
+}
+
+.input-item {
+  display: block;
+}
+
+#form-login-message {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+}
+
+md-spinner {
+  margin: 20px auto 0;
+}
