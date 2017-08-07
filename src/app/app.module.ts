@@ -13,6 +13,8 @@ import { PlayComponent } from './play/play.component';
 
 import { PlayerService } from './player.service';
 
+import { HttpModule }    from '@angular/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,10 +25,11 @@ import { PlayerService } from './player.service';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [PlayerService],
   bootstrap: [AppComponent]
